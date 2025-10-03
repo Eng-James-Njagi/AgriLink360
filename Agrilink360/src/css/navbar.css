@@ -1,0 +1,126 @@
+.navigation{
+   display:flex;
+   align-items:center;
+   padding:0.3em 1em;
+   justify-content:space-between;
+   margin:0.3em 1.5em;
+}
+.companySection{
+   align-items:center;
+}
+.companySection img{
+   width:80px;
+   height:80px;
+   object-fit:contain;
+}
+.navLinks{
+   background:#6E8649;
+   width:50%;
+   border-radius:3em;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   padding:0.4em 0;
+   margin-left:6em;
+}
+ul{
+   list-style:none;
+   gap:2em;
+   font-family:"Sora";
+   font-weight:700;
+}
+li a{
+   color:white;
+   text-decoration:inherit;
+   display:flex;
+   align-items:center;
+   border-radius:3em;
+   padding:0.2em 0.6em;
+   justify-content:center;
+}
+li a:hover{
+   background:#477023;
+   transition:all 0.3s ease;
+}
+.btns{
+   display:flex;
+   align-items:center;
+   gap:1.5em;
+}
+.btns button{
+   padding:0.4em 1.2em;
+   border:0.2em solid #6E8649;
+   background:none;
+   font-family:"Sora";
+   font-weight:800;
+   border-radius:0.5em;
+   cursor:pointer;
+}
+.btns button:hover{
+   background:#6E8649;
+   color:white;
+   transition:all 0.3s ease;
+}
+.hamburger{
+   background:#6E8649;
+   padding:0.2em;
+   display:none;
+   align-items:center;
+   justify-content:center;
+   border-radius:0.3em;
+   cursor:pointer;
+}
+.hamburgerIcon{
+   color:white;
+}
+.hamburger:hover{
+   background:white;
+   transition:all 0.2s ease;
+}
+.hamburgerIcon:hover{
+   color:#6E8649;
+   transition:all 0.2s ease;
+}
+@media(max-width:768px){
+   .navigation{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center
+   }
+   .companySection{
+      order:1;
+      flex:1;
+   }
+   .hamburger{
+      display:flex;
+      order:2
+   }
+   .navLinks{
+      display:none;
+      flex-basis:100%;
+      width:100%;
+      border-radius:1em;
+      order:4;
+      flex-direction:column;
+      margin-left:1em;
+      padding:0.8em 0;
+      justify-content:center;
+   }
+   .navLinks.show{
+      display:flex;
+      transition:all 0.3s ease;
+   }
+   .navLinks li{
+      width:100%;
+   }
+   .navLinks li a:hover{
+      border-radius:0;
+      padding:0.3em 0;
+   }
+   .btns{
+      order:3;
+      display:flex;
+      flex-basis:100%;
+      justify-content:center;
+   }
+}
